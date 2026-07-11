@@ -15,6 +15,8 @@ To maintain clean architecture, this component is broken down into three separat
 1. **`main.dart`**: The entry point of the application that sets up the `MaterialApp` and scaffolds the main screen.
 2. **`card-layout_1.dart`**: Contains the custom widget class responsible for the layout and styling of the individual bank card.
 3. **`card-layout_2.dart`**: Manages the data being passed into the cards or handles the layout of the overall screen containing multiple cards.
+4. **`card-layout_3.dart`**: Manages the data being passed into the cards or handles the layout of the overall screen containing multiple cards.
+
 
 ## 🛠️ Technical Concepts Practiced
 * **Component Modularity:** Isolating UI elements into separate Dart files to keep the main file clean and readable.
