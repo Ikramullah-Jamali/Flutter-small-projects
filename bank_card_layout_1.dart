@@ -1,0 +1,149 @@
+import 'package:flutter/material.dart';
+
+void main()
+{
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: HomePage(),
+    );
+  }
+}
+class HomePage extends StatelessWidget {
+  const HomePage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.grey,
+      appBar: AppBar(
+        backgroundColor: Colors.black38,
+        title:Row(
+          children: [
+            Icon(Icons.arrow_back_ios,color: Colors.white,),
+            Expanded(child: SizedBox()),
+            Container(
+              margin: EdgeInsets.all(15),
+              padding: EdgeInsets.all(5),
+              width: 90,
+              height: 40,
+              decoration: BoxDecoration(
+                  color: Colors.grey,
+                  borderRadius: BorderRadius.circular(10)
+              ),
+              child: Row(
+                children: [
+                  Icon(Icons.add,color: Colors.white,),
+                  Text("Add New",style: TextStyle(color: Colors.white,fontSize: 12),)
+                ],
+              ),
+            )
+          ],
+        ),
+      ),
+      body: SingleChildScrollView(
+        child: Container(
+          width: double.infinity,
+          margin: EdgeInsets.all(15),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+          spacing: 6,
+          children: [
+            DefaultTabController(
+              length: 1,
+              child: Text("Make payment",style: TextStyle(color: Colors.white)),
+            ),
+            Text("Choose card",style: TextStyle(color: Colors.white,fontSize: 30,fontWeight: FontWeight.bold),),
+            //SizedBox(height: 10,),
+            Container(
+              //margin: EdgeInsets.all(20),
+              padding: EdgeInsets.all(20),
+              height: 190,
+              decoration: BoxDecoration(
+                  // gradient: LinearGradient(
+                  //     begin:Alignment.centerLeft,
+                  //     end: Alignment.centerRight,
+                  //     colors: [Color(0), Color(0xFFF9D1D5)]  ),
+                color: Colors.blueGrey,
+                borderRadius: BorderRadius.circular(20)
+              ),
+              child: Column(
+                spacing: 10,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    spacing:10,
+                    children: [
+                      CircleAvatar(
+                        backgroundImage: NetworkImage("https://thumbs.dreamstime.com/b/house-icon-vector-home-275533738.jpg"),
+                      ),
+                      Text("ABC",style: TextStyle(fontWeight: FontWeight.bold,color: Colors.white,fontSize: 20),),
+                      Expanded(child: SizedBox()),
+                      Column(
+                        children: [
+                          Text("VISA",style: TextStyle(fontWeight: FontWeight.bold,color: Colors.white,fontSize: 20)),
+                          Text("Debit card",style: TextStyle(fontWeight: FontWeight.w200,color: Colors.white),)
+                        ],
+                      )
+                    ],
+                  ),
+                  Text("XXXX XXXX 5779",style: TextStyle(color: Colors.white,fontSize: 15,letterSpacing:4),),
+                  Row(
+                    children: [
+                      Text("AHAD HASHMI",style: TextStyle(color: Colors.white,fontSize: 20)),
+                      Expanded(child: SizedBox()),
+                      Column(
+                        children: [
+                          Text("Valid untill",style: TextStyle(color: Colors.white,fontSize: 15)),
+                          Text("MAY / 29",style: TextStyle(color: Colors.white,fontSize: 18,fontWeight: FontWeight.bold))
+                        ],
+                      )
+                    ],
+                  )
+                ],
+              ),
+            ),
+            Container(
+              //margin: EdgeInsets.all(15),
+              child: Row(
+                children: [
+                  Text("Balance",style: TextStyle(color: Colors.white,fontSize: 20)),
+                  Expanded(child: SizedBox()),
+                  Text("PKR 13,354,345",style: TextStyle(color: Colors.white,fontSize: 25))
+                ],
+              ),
+            ),
+            SizedBox(height: 5,),
+            Container(
+              padding: EdgeInsets.all(10),
+              height: 60,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.only(topLeft:Radius.circular(10),bottomLeft: Radius.circular(10),topRight: Radius.circular(40),bottomRight: Radius.circular(40) ),
+                gradient: LinearGradient(
+                    begin:Alignment.centerLeft,
+                    end: Alignment.centerRight,
+                    colors: [Color(0xFFCEBEE1), Color(0xFFF9D1D5)]  )
+              ),
+              child: Row(
+                children: [
+                  Text("Proceed to Pay",style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold)),
+                  Expanded(child: SizedBox()),
+                  Icon(Icons.arrow_forward_ios_rounded)
+                ],
+              ),
+            )
+          ],
+        ),
+        ),
+      ),
+    );
+  }
+}
+
