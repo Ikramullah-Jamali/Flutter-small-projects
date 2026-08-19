@@ -32,4 +32,7 @@ If you want to run this specific project on your local machine:
    ```bash
    flutter run
 ## Made by: Ikramullah Jamali
-   
+   <img width="734" height="1600" alt="bank card 1" src="https://github.com/user-attachments/assets/648d8b38-1d09-4706-92d7-399d1ad453b4" />
+   <img width="733" height="1600" alt="bank card 3" src="https://github.com/user-attachments/assets/4f755c3f-1ac2-4678-b650-2a40c86701d4" />
+
+
