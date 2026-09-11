@@ -11,6 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.blue,
@@ -21,9 +22,9 @@ class MyApp extends StatelessWidget {
           mainAxisSpacing: 10,
           crossAxisSpacing: 10,
           children: [
-            Container(
-              color: Colors.black,
-            ),
+            // Container(
+            //   color: Colors.black,
+            // ),
             Image.network("https://www.geosuper.tv/assets/uploads/updates/2021-12-22/12454_8540168_updates.gif",fit:BoxFit.cover,),
             Image.network("https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_800,q_50/lsci/db/PICTURES/CMS/417800/417847.jpg",fit:BoxFit.cover),
             Image.network("https://img1.hscicdn.com/image/upload/f_auto,t_ds_wide_w_800,q_50/lsci/db/PICTURES/CMS/308200/308245.6.jpg",fit:BoxFit.cover),
